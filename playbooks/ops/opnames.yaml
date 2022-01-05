@@ -11,6 +11,7 @@ OPNAMES:
   channelquery: "channel query"
   profilegen: "profile generation"
   channelsign: "channel signoff"
+  channelsignenvelope: "channel signoff envelope"
   channelupdate: "channel update"
   anchorupdate: "anchor update"
   dashup: "dashboard up"
@@ -48,6 +49,7 @@ PRECONDITIONS:
   channelquery: ['PEER', 'ORDERER']
   profilegen: []
   channelsign: ['PEER', 'ORDERER']
+  channelsignenvelope: ['PEER', 'ORDERER']
   channelupdate: ['PEER', 'ORDERER']
   anchorupdate: ['PEER', 'ORDERER']
   dashup: []

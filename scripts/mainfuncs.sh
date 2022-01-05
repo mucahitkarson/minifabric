@@ -19,7 +19,7 @@ OPNAMES=([up]="$LINE0$LINE1" [netup]='imageget,certgen,netup,netstats' \
   [commit]='cccommit' [invoke]='ccinvoke' [create]='channelcreate' \
   [query]='ccquery' [join]='channeljoin' [blockquery]='blockquery' \
   [channelquery]='channelquery' [profilegen]='profilegen' [caliperrun]='caliperrun' \
-  [channelsign]='channelsign' [channelupdate]='channelupdate' \
+  [channelsign]='channelsign' [channelsignenvelope]='channelsignenvelope' [channelupdate]='channelupdate' \
   [portainerup]='portainerup' [portainerdown]='portainerdown' \
   [anchorupdate]='anchorupdate' [explorerup]='explorerup' [explorerdown]='explorerdown' \
   [consoleup]='consoleup' [consoledown]='consoledown' \
@@ -50,6 +50,7 @@ function printHelp() {
   echo "      - 'blockquery'  - do channel block query and produce a channel tx json file"
   echo "      - 'channelquery'  - do channel query and produce a channel configuration json file"
   echo "      - 'channelsign'  - do channel config update signoff"
+  echo "      - 'channelsignenvelope'  - do channel config update signoff using the file CHANNEL_NAME_update_envelope.pb"
   echo "      - 'channelupdate'  - do channel update with a given new channel configuration json file" 
   echo "      - 'anchorupdate'  - do channel update which makes all peer nodes anchors for the all orgs"
   echo "      - 'nodeimport' - import external node certs and endpoints"
