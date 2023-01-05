@@ -1,9 +1,11 @@
 #!/bin/bash
 
 [ ! -d "$(pwd)/vars" ] && mkdir vars
-if type ip > /dev/null 2>&1; then
+if [[ ! -z "$HOST_ADDRESS" ]];then
+  ADDRS=$HOST_ADDRESS
+elif type ip > /dev/null 2>&1; then
   ADDRS=$(ip addr|grep 'inet '|grep -v '\.1/'|tr -s ' '|awk '{$1=$1};1'|cut -d ' ' -f 2|cut -d '/' -f 1|paste -sd "," -|sed s/addr://g)
-else 
+else
   ADDRS=$(ifconfig|grep 'inet '|grep -v '\.1 '|tr -s ' '|awk '{$1=$1};1'|cut -d ' ' -f 2|cut -d '/' -f 1|paste -sd "," -|sed s/addr://g)
 fi
 if [ -f "$(pwd)/spec.yaml" ]; then
