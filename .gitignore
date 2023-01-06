@@ -2,3 +2,4 @@
 vars/*
 *.retry
 .vscode
+.idea

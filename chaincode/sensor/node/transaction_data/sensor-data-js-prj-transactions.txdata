@@ -1,0 +1,44 @@
+[
+    {
+        "transactionName": "sensorDataJsPrjExists",
+        "transactionLabel": "A test sensorDataJsPrjExists transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "createSensorDataJsPrj",
+        "transactionLabel": "A test createSensorDataJsPrj transaction",
+        "arguments": [
+            "001",
+            "some value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "readSensorDataJsPrj",
+        "transactionLabel": "A test readSensorDataJsPrj transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "updateSensorDataJsPrj",
+        "transactionLabel": "A test updateSensorDataJsPrj transaction",
+        "arguments": [
+            "001",
+            "some other value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "deleteSensorDataJsPrj",
+        "transactionLabel": "A test deleteSensorDataJsPrj transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    }
+]
