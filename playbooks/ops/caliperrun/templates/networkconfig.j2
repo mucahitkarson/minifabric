@@ -13,12 +13,12 @@
       "Orderer": Raft,
       "StateDB": "{{ DB_TYPE }}"
     }
-  },  
+  },
   "caliper": {
     "blockchain": "fabric"
   },
   "clients": {
-    "Admin@{{ org }}": {
+    "admin@{{ org }}": {
       "client": {
         "credentialStore": {
           "path": "tmp/org1",
@@ -26,10 +26,10 @@
         },
         "organization": "{{ org }}",
         "clientPrivateKey": {
-          "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/Admin@{{ org }}/msp/keystore/priv_sk"
+          "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/admin@{{ org }}/msp/keystore/priv_sk"
         },
         "clientSignedCert": {
-          "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/Admin@{{ org }}/msp/signcerts/Admin@{{ org }}-cert.pem"
+          "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/admin@{{ org }}/msp/signcerts/admin@{{ org }}-cert.pem"
         },
         "connection": {
           "timeout": { "peer": { "endorser": "300" } }
@@ -59,10 +59,10 @@
       ],
 {% endif %}
       "adminPrivateKey": {
-        "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/Admin@{{ org }}/msp/keystore/priv_sk"
+        "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/admin@{{ org }}/msp/keystore/priv_sk"
       },
       "signedCert": {
-        "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/Admin@{{ org }}/msp/signcerts/Admin@{{ org }}-cert.pem"
+        "path": "/hyperledger/caliper/workspace/keyfiles/peerOrganizations/{{ org }}/users/admin@{{ org }}/msp/signcerts/admin@{{ org }}-cert.pem"
       }
     }
   },

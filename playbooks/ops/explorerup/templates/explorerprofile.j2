@@ -32,10 +32,10 @@
     "{{ org }}": {
       "mspid": "{{ org.split('.')|join('-') }}",
       "adminPrivateKey": {
-        "path": "/{{ allkeys['Admin@'+org].pkey }}"
+        "path": "/{{ allkeys['admin@'+org].pkey }}"
       },
       "signedCert": {
-        "path": "/keyfiles/{{ orgattrs[org].certpath }}/{{ org }}/users/Admin@{{ org }}/msp/signcerts/Admin@{{ org }}-cert.pem"
+        "path": "/keyfiles/{{ orgattrs[org].certpath }}/{{ org }}/users/admin@{{ org }}/msp/signcerts/admin@{{ org }}-cert.pem"
       },
       "peers": [
 {% for peer in allpeers|selectattr('org', 'equalto', org)|list %}

@@ -240,7 +240,7 @@ spec:
           mkdir -p msp/admincerts msp/cacerts msp/keystore msp/signcerts msp/tlscacerts
           cp /idcerts/tls.crt msp/signcerts/{{ node.fullname }}-cert.pem
           cp /idcerts/tls.key msp/keystore/priv_sk
-          cp /admincerts/tls.crt msp/admincerts/Admin@{{ node.org }}-cert.pem
+          cp /admincerts/tls.crt msp/admincerts/admin@{{ node.org }}-cert.pem
           cp /cacerts/tls.crt msp/cacerts/{{caname}}.{{ node.org }}-cert.pem
           ls -lR /dataroot
         volumeMounts:
@@ -506,7 +506,7 @@ spec:
           mkdir -p msp/admincerts msp/cacerts msp/keystore msp/signcerts msp/tlscacerts
           cp /idcerts/tls.crt msp/signcerts/{{ node.fullname }}-cert.pem
           cp /idcerts/tls.key msp/keystore/priv_sk
-          cp /admincerts/tls.crt msp/admincerts/Admin@{{ node.org }}-cert.pem
+          cp /admincerts/tls.crt msp/admincerts/admin@{{ node.org }}-cert.pem
           cp /cacerts/tls.crt msp/cacerts/{{caname}}.{{ node.org }}-cert.pem
           ls -R /dataroot
         volumeMounts:
@@ -538,7 +538,7 @@ spec:
         image: hyperledger/fabric-peer:{{ fabric.release }}
         imagePullPolicy: IfNotPresent
         securityContext:
-          privileged: true        
+          privileged: true
         env:
         - { name: "CORE_VM_ENDPOINT",                   value: "unix:///var/run/docker.sock" }
         - { name: "CORE_PEER_GOSSIP_USELEADERELECTION", value: "true" }

@@ -43,7 +43,7 @@ configtxlator proto_encode --input {{ CHANNEL_NAME }}_update_envelope.json \
 {% set signpeer = allpeers|selectattr('org', 'equalto', org)|list|random %}
 export CORE_PEER_LOCALMSPID={{ signpeer.mspid }}
 export CORE_PEER_TLS_ROOTCERT_FILE=/vars/keyfiles/peerOrganizations/{{ signpeer.org }}/peers/{{ signpeer.fullname }}/tls/ca.crt
-export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/{{ signpeer.org }}/users/Admin@{{ signpeer.org }}/msp
+export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/{{ signpeer.org }}/users/admin@{{ signpeer.org }}/msp
 export CORE_PEER_ADDRESS={{ signpeer.url }}:{{ signpeer.port }}
 
 peer channel signconfigtx -f {{ CHANNEL_NAME }}_update_envelope.pb

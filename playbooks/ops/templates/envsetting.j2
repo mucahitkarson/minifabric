@@ -4,7 +4,7 @@ export CORE_PEER_ID=cli
 export CORE_PEER_ADDRESS={{ actingpeer.url }}:{{ actingpeer.port }}
 export CORE_PEER_TLS_ROOTCERT_FILE=/vars/keyfiles/peerOrganizations/{{ actingpeer.org }}/peers/{{ actingpeer.fullname }}/tls/ca.crt
 export CORE_PEER_LOCALMSPID={{ actingpeer.mspid }}
-export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/{{ actingpeer.org }}/users/Admin@{{ actingpeer.org }}/msp
+export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/{{ actingpeer.org }}/users/admin@{{ actingpeer.org }}/msp
 {% endif %}
 {% if actingorderer is defined and actingorderer != '' %}
 export ORDERER_ADDRESS={{ actingorderer.url }}:{{ actingorderer.port }}

@@ -107,7 +107,7 @@
     -p {{ webports[item.fullname] }}:8443
     -v {{hostroot}}/vars/keyfiles/{{ orgattrs[item.org].certpath}}/{{ item.org }}/{{ item.type }}s/{{ item.fullname }}/tls:/certs/tls
     ghcr.io/hyperledger-labs/grpc-web:latest
-  with_items: "{{ allorderers + allpeers }}"  
+  with_items: "{{ allorderers + allpeers }}"
 
 - name: Generate asset files for CA
   template:
@@ -136,7 +136,7 @@
 - name: Generate wallets for each Admin
   template:
     src: "{{ pjroot }}/playbooks/ops/consoleup/templates/wallet.j2"
-    dest: "{{ pjroot }}/vars/console/assets/Wallets/Admin-{{ item }}.json"
+    dest: "{{ pjroot }}/vars/console/assets/Wallets/admin-{{ item }}.json"
   with_items: "{{ allorgs }}"
 
 - name: Package all the assets to one file

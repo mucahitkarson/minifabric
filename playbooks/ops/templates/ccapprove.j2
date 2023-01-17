@@ -22,7 +22,7 @@ fi
 
 export CORE_PEER_LOCALMSPID={{ approvepeer.mspid }}
 export CORE_PEER_TLS_ROOTCERT_FILE=/vars/keyfiles/peerOrganizations/{{ approvepeer.org }}/peers/{{ approvepeer.fullname }}/tls/ca.crt
-export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/{{ approvepeer.org }}/users/Admin@{{ approvepeer.org }}/msp
+export CORE_PEER_MSPCONFIGPATH=/vars/keyfiles/peerOrganizations/{{ approvepeer.org }}/users/admin@{{ approvepeer.org }}/msp
 export CORE_PEER_ADDRESS={{ approvepeer.url }}:{{ approvepeer.port }}
 
 # approved=$(peer lifecycle chaincode checkcommitreadiness --channelID {{ CHANNEL_NAME }} \

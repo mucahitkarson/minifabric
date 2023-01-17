@@ -70,7 +70,7 @@
          'target': orgrootpath+partyroot+'/msp/tlscacerts' } }}"
   - "{{ {'source': orgrootpath+'/tlsca/tls'+caname+'.'+org+'-cert.pem',
          'target': orgrootpath+partyroot+'/tls/ca.crt' } }}"
-  - "{{ {'source': orgrootpath+'/users/Admin@'+org+'/msp/signcerts/Admin@'+org+'-cert.pem',
+  - "{{ {'source': orgrootpath+'/users/admin@'+org+'/msp/signcerts/admin@'+org+'-cert.pem',
          'target': orgrootpath+partyroot+'/msp/admincerts' } }}"
 
 - name: Duplicate files

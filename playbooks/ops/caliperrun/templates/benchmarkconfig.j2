@@ -8,7 +8,7 @@ test:
       - label: {{ CC_NAME }} test
         description: {{ CC_NAME }} benchmark
         txDuration: 60
-        rateControl: 
+        rateControl:
           type: fixed-load
           opts:
             transactionLoad: 300
@@ -17,4 +17,4 @@ test:
           arguments:
             contractId: {{ CC_NAME }}
             randomSeed: 5000000
-            userID: Admin@{{ CURRENT_ORG }}
+            userID: admin@{{ CURRENT_ORG }}

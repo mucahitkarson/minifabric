@@ -20,14 +20,14 @@ async function main() {
         console.log(`Wallet path: ${walletPath}`);
 
         // Check to see if we've already enrolled the admin user.
-        const identity = await wallet.get('Admin');
+        const identity = await wallet.get('admin');
         if (! identity) {
             console.log('Admin identity can not be found in the wallet');
             return;
         }
 
         const gateway = new Gateway();
-        await gateway.connect(ccp, { wallet, identity: 'Admin', discovery: { enabled: true, asLocalhost: false } });
+        await gateway.connect(ccp, { wallet, identity: 'admin', discovery: { enabled: true, asLocalhost: false } });
 
         // Get the network (channel) our contract is deployed to.
         const network = await gateway.getNetwork('mychannel');

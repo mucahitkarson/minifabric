@@ -22,7 +22,7 @@ const (
 	ccID      = "samplecc"
 	channelID = "mychannel"
 	orgName   = "org1.example.com"
-	orgAdmin  = "Admin"
+	orgAdmin  = "admin"
 )
 
 func doEnroll() {
@@ -122,7 +122,7 @@ func useClientExecute(index int) {
 func useGateway() {
 	gw, err := gateway.Connect(
 		gateway.WithConfig(config.FromFile("./connection.json")),
-		gateway.WithUser("Admin"),
+		gateway.WithUser("admin"),
 	)
 
 	if err != nil {
@@ -178,14 +178,14 @@ func useWalletGateway() {
 		os.Exit(1)
 	}
 
-	if !wallet.Exists("Admin") {
+	if !wallet.Exists("admin") {
 		fmt.Println("Failed to get Admin from wallet")
 		os.Exit(1)
 	}
 
 	gw, err := gateway.Connect(
 		gateway.WithConfig(config.FromFile("./connection.json")),
-		gateway.WithIdentity(wallet, "Admin"),
+		gateway.WithIdentity(wallet, "admin"),
 	)
 
 	if err != nil {

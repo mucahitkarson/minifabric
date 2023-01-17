@@ -113,7 +113,7 @@
 
 - name: Set up parties
   set_fact:
-    allparties: "{{ [{'root': '/users/Admin@'+org, 'role': 'admin', 'cn': 'Admin@'+org, 'type': 'client' }] }}"
+    allparties: "{{ [{'root': '/users/admin@'+org, 'role': 'admin', 'cn': 'admin@'+org, 'type': 'client' }] }}"
 
 - name: Add peers and orderers of the org
   set_fact:
@@ -152,5 +152,5 @@
   command: >-
     cp {{ item.source }} {{ item.target }}
   with_items:
-  - "{{ {'source': orgrootpath+'/users/Admin@'+org+'/msp/signcerts/Admin@'+org+'-cert.pem',
+  - "{{ {'source': orgrootpath+'/users/admin@'+org+'/msp/signcerts/admin@'+org+'-cert.pem',
          'target': orgrootpath+'/msp/admincerts' } }}"
